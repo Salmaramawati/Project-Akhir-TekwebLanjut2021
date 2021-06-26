@@ -4,6 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material';
+import { GuruComponent } from './guru/guru.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,17 @@ const routes: Routes = [
       {
         path:'dashboard',
         component:DashboardComponent
+      },
+      {
+        path:'guru',
+        component: GuruComponent
+      }, 
+      {
+        path:'',
+        pathMatch:'full',
+        redirectTo:'/admin/dashboard'
       }
+
     ]
   }
 ]
@@ -22,7 +33,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AdminComponent,
-    DashboardComponent
+    DashboardComponent,
+    GuruComponent
   ],
   imports: [
     CommonModule,
