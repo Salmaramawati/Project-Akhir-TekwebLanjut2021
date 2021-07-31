@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "buku-guru-3b0d1": {
+      "hosting": {
+        "Project-Akhir": [
+          "buku-guru-3b0d1"
+        ]
+      }
+    }
+  }
+}

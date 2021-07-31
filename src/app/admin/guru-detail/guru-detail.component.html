@@ -1,0 +1,34 @@
+<h3 mat-dialog-title>
+    Detail Data Guru
+ </h3>
+ <div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Nama</mat-label>
+        <input matInput [(ngModel)]="data.name">      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>NIY</mat-label>
+        <input matInput [(ngModel)]="data.niy" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Alamat</mat-label>
+        <input matInput [(ngModel)]="data.address" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Bidang Studi</mat-label>
+        <input matInput [(ngModel)]="data.studi" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Profil</mat-label>
+        <input matInput [(ngModel)]="data.profil" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Tahun Masuk</mat-label>
+        <input matInput type="number" [(ngModel)]="data.year" >      
+    </mat-form-field>
+ </div>
+ <div mat-dialog-actions align="end">
+ <button mat-button mat-dialog-close>Batal</button>
+ <button mat-flat-button (click)="saveData()" [disabled]="loading">{{loading ? 'Menyimpan..':'Simpan'}}</button>
+ </div>
+

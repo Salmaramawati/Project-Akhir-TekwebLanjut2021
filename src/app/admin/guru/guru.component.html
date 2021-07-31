@@ -1,34 +1,38 @@
-<mat-card>
+<div *ngIf="loading" style="height: 300px" class="uk-flex uk-flex-center uk-flex-middle">
+    <mat-spinner></mat-spinner>
+</div>
+<mat-card *ngIf="!loading">
     <mat-card-header>
         <mat-card-title>{{title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <div class="uk-flex">
             <span class="uk-width-expand"></span>
-            <button mat-flat-button color="primary">Tambah Produk</button>
+            <button mat-flat-button color="primary" (click)="guruDetail({},-1)">Tambah Data</button>
         </div>
         <table class="uk-table uk-table-middle uk-table-divider">
             <thead>                
                 <th>No</th>
-                <th>Judul</th>
-                <th>Penulis</th>
-                <th>Penerbit</th>
-                <th>Tahun Terbit</th>
-                <th>ISBN</th>
-                <th>Harga</th>
+                <th>Nama</th>
+                <th>NIY</th>
+                <th>Alamat</th>
+                <th>Bidang Studi</th>
+                <th>Profil</th>
+                <th>Tahun Masuk</th>
                 <th align="right">#</th>
             </thead>
             <tbody>
                 <tr *ngFor="let book of books; let idx=index">
                     <td>{{idx+1}}</td>
-                    <td>{{book.title}}</td>
-                    <td>{{book.author}}</td>
-                    <td>{{book.publisher}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.niy}}</td>
+                    <td>{{book.address}}</td>
+                    <td>{{book.studi}}</td>
+                    <td>{{book.profil}}</td>
                     <td>{{book.year}}</td>
-                    <td>{{book.price}}</td>
                     <td align="right">
-                        <button mat-button color="primary" >Edit</button>
-                        <button mat-button color="warn">Delete</button>
+                        <button mat-button color="primary" (click)="guruDetail(book,idx)">Edit</button>
+                        <button mat-button color="warn" (click)="deleteData(book.id, idx)"[disabled]="loadingDelete[idx]">{{loadingDelete[idx] ? 'Deleting..':'Delete'}}</button>
                     </td>
                 </tr>
             </tbody>
