@@ -7,7 +7,7 @@
     <span>SMAN 1 MEJAYAN</span>
     <div class="uk-width-expand"></div>
     <button mat-button class="mini-tittle"><mat-icon matListIcon>account_circle</mat-icon></button>
-		<button mat-button style="background-color: #00ACC1;" class="mini-tittle" routerLink="/home">Logout</button>
+    <button mat-stroked-button color="white" routerLink="/home">Logout</button>
     </mat-toolbar>
     <!--end toolbar-->
     
@@ -27,9 +27,17 @@
             <mat-icon matListIcon>dashboard</mat-icon>
             <h3 matLine>Dashboard</h3>
         </mat-list-item>
+        <mat-list-item routerLink="/admin/kepala">
+          <mat-icon matListIcon>school</mat-icon>
+          <h3 matLine>Kepala Sekolah</h3>
+        </mat-list-item> 
         <mat-list-item routerLink="/admin/guru">
           <mat-icon matListIcon>assignment_ind</mat-icon>
           <h3 matLine>Profil Guru</h3>
+        </mat-list-item>
+        <mat-list-item routerLink="/admin/katalog">
+          <mat-icon matListIcon>local_library</mat-icon>
+          <h3 matLine>Katalog</h3>
         </mat-list-item>
       </mat-nav-list>
 

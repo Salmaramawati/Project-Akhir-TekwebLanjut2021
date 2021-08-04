@@ -3,15 +3,56 @@
         <span><strong>WELCOME TO SMAN 1 MEJAYAN</strong></span>
     </div>
     <div class="uk-width-expand"></div>
-    <button mat-button style="background-color: #00ACC1; color:white" routerLink="/login">Get Started</button>
+    <button mat-raised-button style="background-color: #00ACC1; color:white" routerLink="/login">Get Started</button>
 </mat-toolbar>
-<span>
-<div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport uk-width-expand">
-    <mat-card>
-        <mat-card-header></mat-card-header>
-        <img mat-card-image src="https://www.pendidik.co.id/wp-content/uploads/2019/01/Pengertian-Sekolah-Fungsi-Jenis-dan-Unsurnya-Lengkap.jpg" alt="Sman 1 Mejayan">
-        <mat-card-content></mat-card-content>
-        <mat-card-actions></mat-card-actions>
-    </mat-card>
+
+<mat-grid-list cols="1" rowHeight="5:1">
+    <mat-grid-tile style="background-image: url('assets/sma.png');"></mat-grid-tile>
+</mat-grid-list>
+
+<div class="uk-flex uk-flex-center uk-flex-middle">
+    <mat-tab-group>
+        <mat-tab label="Beranda">
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport uk-width-expand">
+                <mat-card>
+                    <mat-card-header></mat-card-header>
+                    <mat-card-actions></mat-card-actions>
+                    <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+                        <mat-card-title>Selamat Datang di Aplikasi Teacher'Room</mat-card-title>
+                    </div> 
+                    <img mat-card-image src="https://www.pendidik.co.id/wp-content/uploads/2019/01/Pengertian-Sekolah-Fungsi-Jenis-dan-Unsurnya-Lengkap.jpg" alt="Sman 1 Mejayan">
+                    <mat-card-content style="font-size: larger;">
+                        Teacher'Room adalah aplikasi yang membantu kamu untuk mengenal guru lebih dekat
+                    </mat-card-content>
+                    <mat-card-actions></mat-card-actions>
+                </mat-card>
+            </div>               
+        </mat-tab>
+        <mat-tab label="About">
+            <div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport uk-width-expand">
+                <mat-card style="background-color:rgb(228, 228, 228);">
+                    <mat-card-header></mat-card-header>
+                    <mat-card-actions></mat-card-actions>
+                    <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+                        <mat-card-title>Visi-Misi SMAN 1 MEJAYAN</mat-card-title>
+                    </div> 
+                   
+                    <mat-card-content style="font-size: larger;">
+                        VISI<br/>
+                        Unggul dalam prestasi, karakter, peduli lingkungan, berwawasan global yang dilandasi iman dan takwa
+                    </mat-card-content>
+                    <mat-card-content style="font-size: larger;">
+                        MISI <br/>
+                        1. Membina peserta didik unggul dalam prestasi akademis di taraf nasional maupun internasional <br/>
+                        2. Membina peserta didik unggul dalam prestasi non-akademis di taraf nasional maupun internasional <br/>
+                        3. Menumbuhkembangkan budaya sekolah sehat dan peduli lingkungan <br/>
+                        4. Melaksanakan pembelajaran dan penggunaan bahasa internasional
+                    </mat-card-content>
+                    <mat-card-actions></mat-card-actions>
+                </mat-card>
+            </div>   
+        </mat-tab>
+    </mat-tab-group>
 </div>
-</span>
+
+

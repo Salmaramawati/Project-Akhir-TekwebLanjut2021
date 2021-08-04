@@ -7,6 +7,8 @@ import { MaterialDesign } from '../material/material';
 import { GuruComponent } from './guru/guru.component';
 import { GuruDetailComponent } from './guru-detail/guru-detail.component';
 import { FormsModule } from '@angular/forms';
+import { KepalaComponent } from './kepala/kepala.component';
+import { KatalogComponent } from './katalog/katalog.component';
 
 const routes: Routes = [
   {
@@ -20,6 +22,14 @@ const routes: Routes = [
       {
         path:'guru',
         component: GuruComponent
+      },
+      {
+        path:'kepala',
+        component: KepalaComponent
+      }, 
+      {
+        path:'katalog',
+        component: KatalogComponent
       }, 
       {
         path:'',
@@ -37,7 +47,9 @@ const routes: Routes = [
     AdminComponent,
     DashboardComponent,
     GuruComponent,
-    GuruDetailComponent
+    GuruDetailComponent,
+    KepalaComponent,
+    KatalogComponent
   ],
   imports: [
     CommonModule,
